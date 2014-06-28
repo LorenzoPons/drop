@@ -1,7 +1,7 @@
 
 import serial
 
-ser = serial.Serial('/dev/ttyACM', 9600)
+ser = serial.Serial('/dev/ttyACM1', 9600)
 
 while 1:
-	ser.readline()
+	print ser.readline()
