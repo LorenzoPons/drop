@@ -1,13 +1,14 @@
-byte number = 0;
+int incomingByte = 0;
+
 
 void setup(){
   Serial.begin(9600);
 }
 
 void loop(){
-  if (Serial.available())  {
-    number = Serial.read();
-    Serial.print("character recieved: ");
-    Serial.println(number, DEC);
+  if (Serial.available() > 0)  {
+    incomingByte = Serial.read();
+    Serial.print("I received: ");
+    Serial.println(incomingByte, DEC);
   }
 }
